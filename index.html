@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #mainnav{
+            background-color:rgb(255, 251, 251);
+            padding: 0px;
+            
+        }
+        .hdnm span{
+          text-decoration: none;
+          opacity: 0.5;
+          font-size: 25px;
+          
+        }
+        .hdnm span:hover{
+          opacity: 1;
+          font-size: 35px;
+        }
+        /* .container-fluid ul a{
+          text-decoration: none;
+          opacity: 0.5;
+          
+          
+          
+        }
+        .container-fluid ul a:hover{
+          opacity: 1;
+          
+        } */
+       
+        #navbarSupportedContent li a{
+          color:rgb(8, 8, 8);
+        }
+        #navbarSupportedContent li a:hover{
+          color:#ad81f4
+        }
+        body{
+          margin: 0;
+          padding: 0;
+          background: black;
+          background-size: cover;
+          background-image: url('black img.jpg');
+          background-attachment: absolute;
+          
+        }
+        .search-box{
+          position:absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+          background: #c3b1e1;
+          height:60px;
+          border-radius: 40px;
+          padding: 10px;
+          
+        }
+        .search-box:hover > .search-text{
+          width:1000px;
+          padding: 0 9px;
+
+        }
+        .search-box:hover > .search-btn{
+          background-color: white;
+          color:#982aff;
+        }
+        .search-btn {
+  color: black;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+.search-btn > i {
+  fontsize: 30px;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+.carousel-inner{
+  margin-top: 200px;
+}
+footer{
+         width: 100%;
+
+  bottom: 0;
+  left: 0;
+  background: #111
+       }
+       footer .content{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content p,a{
+  color: black;
+}
+footer .content .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 16px;
+
+}
+
+footer .content .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 10px 5px 0 0;
+  /* margin-right: 10px; */
+  transition: all 0.3s ease;
+}
+.content .media-icons a:hover{
+  border-color: #cfa9f3;
+}
+footer .content .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .content .lower i{
+  padding-right: 16px;
+}
+footer .content .middle{
+  padding-left: 80px;
+}
+footer .content .middle a{
+  line-height: 32px;
+}
+<!--check code-->
+
+footer .bottom{
+  width: 100%;
+  text-align: right;
+  color: #cfa9f3;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #cfa9f3;
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #cfa9f3;
+}
+#card-box1{
+  height:400px;
+  width:300px;
+}
+#card-box1:hover{
+  height:430px;
+  width:330px;
+}
+
+
+
+
+
+       
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/56a46c1f6f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/56a46c1f6f.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--nav start here  -->
+
+    <nav class="navbar navbar-expand-lg "  style="margin-top: -15px;">
+        <div class="container-fluid"style="height: 40px;" id="mainnav" >
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 800px;">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#"  >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5500/movies.html">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TV Shows</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Top IMDB</a>
+              </li>
+              <li class="nav-item dropdown" style="margin-left:80px;">
+
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#111;font-size:15px;"><i class="fa-solid fa-user"></i>
+
+                </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:transparent;">
+                  <li><a class="dropdown-item" href="http://127.0.0.1:5500/login.html" target="_blank" style="color:white;background-color:transparent;">Join Us</a></li>
+
+
+
+                </ul>
+
+              </li>
+             
+       
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+    <!-- nav ends here -->
+    <!-- <center><h1 style="color:white;">FILMcube</h1></center> -->
+    <center>
+      <div class="hdnm" style="margin-top: 100px;">
+        <span style="color:white">F</span>
+     <span style="color:white">I</span>
+    <span style="color:white">L</span>
+    <span style="color:white">M</span> 
+    <span style="color:#cfa9f3">c</span>
+     <span style="color:#cfa9f3">u</span>
+    <span style="color:#cfa9f3">b</span>
+    <span style="color:#cfa9f3">e</span>
+      </div></center>
+    
+     
+
+    <!-- search button start -->
+
+    <div class="search-box">
+      <input class="search-text" type="text" placeholder="Enter Keywords...">
+      <a href="#" class="search-btn">
+        <i class="fas fa-search"></i>
+        
+      </a>
+    </div>
+
+    <!-- search button end -->
+
+    <!-- carousel start -->
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" id="car1">
+      <div class="carousel-inner" >
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col"><div class="card" id="card-box1" style=" background-color:transparent;border-color: #cfa9f3;">
+              <img src="images\john-wick.jpg" class="card-img-top" alt="..." style="height:300px">
+              <div class="card-body">
+                <h5 class="card-title" style="font-family:cursive; color:white; margin-left: 75px;">John wick</h5>
+                <!-- <p class="card-text" style="font-family:cursive; color:white;">The best classic burgers you will ever find!</p> -->
+                <a href="#" class="btn btn-primary" style="border-color:#cfa9f3;background-color:transparent;font-family:cursive;color:white;margin-left: 5px;padding: 5px 90px;border-radius:1000px;">Explore</a>
+              </div>
+            </div></div>
+            <div class="col"><div class="card"id="card-box1" style="background-color:transparent;border-color: #cfa9f3;">
+              <img src="images\fall.jpg" class="card-img-top" alt="..." style="height:300px">
+              <div class="card-body">
+                <h5 class="card-title" style="font-family:cursive; color:white;margin-left: 90px;">FALL</h5>
+                <!-- <p class="card-text"style="font-family:cursive; color:white;">Choose loaves of bread for every occasion</p> -->
+                <a href="#" class="btn btn-primary"style="border-color:#cfa9f3;background-color:transparent;font-family:cursive;color:white;margin-left: 5px;padding: 5px 90px;border-radius:1000px;">Explore</a>
+              </div>
+            </div></div>
+              <div class="col"><div class="card"id="card-box1" style="background-color:transparent;border-color: #cfa9f3;">
+                <img src="images\maze runner.jpg" class="card-img-top" alt="..." style="height:300px">
+                <div class="card-body">
+                  <h5 class="card-title"style="font-family:cursive; color:white;margin-left: 70px;">Maze Runner</h5>
+                  <!-- <p class="card-text"style="font-family:cursive; color:white;">Taste in every bite</p> -->
+                  <a href="#" class="btn btn-primary"style="border-color:#cfa9f3;background-color:transparent;font-family:cursive;color:white;margin-left: 5px;padding: 5px 90px;border-radius:1000px;">Explore</a>
+                </div>
+              </div></div>
+    
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col"><div class="card"id="card-box1" style="background-color:transparent;border-color: #cfa9f3;">
+              <img src="images\spiderman.jpg" class="card-img-top" alt="..." style="height:300px">
+              <div class="card-body">
+                <h5 class="card-title"style="font-family:cursive; color:white;margin-left: 70px;">SpiderMan</h5>
+                <!-- <p class="card-text"style="font-family:cursive; color:white;">Deep fried chicken mixed with different sauce selections</p> -->
+                <a href="#" class="btn btn-primary"style="border-color:#cfa9f3;background-color:transparent;font-family:cursive;color:white;margin-left: 5px;padding: 5px 90px;border-radius:1000px;">Explore</a>
+              </div>
+            </div></div>
+            <div class="col"><div class="card"id="card-box1" style="background-color:transparent;border-color: #cfa9f3;">
+              <img src="images\alone.jpg" class="card-img-top" alt="..." style="height:300px">
+              <div class="card-body">
+                <h5 class="card-title"style="font-family:cursive; color:white;margin-left: 90px;">ALONE</h5>
+                <!-- <p class="card-text"style="font-family:cursive; color:white;">A chicken lover delight!</p> -->
+                <a href="#" class="btn btn-primary"style="border-color:#cfa9f3;background-color:transparent;font-family:cursive;color:white;margin-left: 5px;padding: 5px 90px;border-radius:1000px;">Explore</a>
+              </div>
+            </div></div>
+              <div class="col"><div class="card"id="card-box1" style="background-color:transparent;border-color: #cfa9f3;">
+                <img src="images\babydriver.jpg" class="card-img-top" alt="..." style="height:300px">
+                <div class="card-body">
+                  <h5 class="card-title"style="font-family:cursive; color:white;margin-left: 70px;">Baby Driver</h5>
+                  <!-- <p class="card-text"style="font-family:cursive; color:white;">Healthy and Tasty diet in each bite</p> -->
+                  <a href="#" class="btn btn-primary"style="border-color:#cfa9f3;background-color:transparent;font-family:cursive;color:white;margin-left: 5px;padding: 5px 90px;border-radius:1000px;">Explore</a>
+                </div>
+              </div></div>
+    
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col"><div class="card"id="card-box1" style="background-color:transparent;border-color: #cfa9f3;">
+              <img src="images\evil dead rise.jpg" class="card-img-top" alt="..."style="height:300px">
+              <div class="card-body">
+                <h5 class="card-title"style="font-family:cursive; color:white;margin-left: 70px;">Evil Dead Rise</h5>
+                <!-- <p class="card-text"style="font-family:cursive; color:white;">Some quick example text to build on the card title</p> -->
+                <a href="#" class="btn btn-primary"style="border-color:#cfa9f3;background-color:transparent;font-family:cursive;color:white;margin-left: 5px;padding: 5px 90px;border-radius:1000px;">Explore</a>
+              </div>
+            </div></div>
+            <div class="col"><div class="card"id="card-box1" style="background-color:transparent;border-color: #cfa9f3;">
+              <img src="images\joker.webp" class="card-img-top" alt="..."style="height:300px">
+              <div class="card-body">
+                <h5 class="card-title"style="font-family:cursive; color:white;margin-left: 90px;">JOKER</h5>
+                <!-- <p class="card-text"style="font-family:cursive; color:white;">Some quick example text to build on the </p> -->
+                <a href="#" class="btn btn-primary"style="border-color:#cfa9f3;background-color:transparent;font-family:cursive;color:white;margin-left: 5px;padding: 5px 90px;border-radius:1000px;">Explore</a>
+              </div>
+            </div></div>
+              <div class="col"><div class="card"id="card-box1" style="background-color:transparent;border-color: #cfa9f3;">
+                <img src="images\loveagain.jpg" class="card-img-top" alt="..."style="height:300px">
+                <div class="card-body">
+                  <h5 class="card-title"style="font-family:cursive; color:white;margin-left: 90px;">Love Again</h5>
+                  <!-- <p class="card-text"style="font-family:cursive; color:white;">Fresh mocktails in different flavour</p> -->
+                  <a href="#" id="bt1" class="btn btn-primary"style="border-color:#cfa9f3;background-color:transparent;font-family:cursive;color:white;margin-left: 5px;padding: 5px 90px;border-radius:1000px;">Explore</a>
+                </div>
+              </div></div>
+    
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+      </div>
+
+    <!-- carousel end -->
+
+    <!-- footer start -->
+
+    <footer style="background-color:black;">
+      <div class="content" style="margin-top: 90px;">
+        <div class="left box">
+          <div class="upper">
+            <div style="color:white;" class="topic">About us</div>
+            <p style="color:white;">Online Movie Watching Website
+            </p>
+          </div>
+          <div class="lower">
+            <!-- <div class="topic" style="color:white;">Contact us</div> -->
+            <!-- <div class="phone">
+              <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+            </div> -->
+            <!-- <div class="email">
+              <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+            </div> -->
+          </div>
+        </div>
+        <!-- <div class="middle box">
+          <div class="topic"style="color:white;">OPENING HOURS</div>
+          <div><p style="color:white;">Monday to Saturday 8:00AM-11:00PM</p></div>
+          <div><p style="color:white;">Sunday closed</p></div>
+        </div> -->
+        <div class="right box" ><br>
+   
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+   
+      </div>
+      <div class="bottom" style="margin-left:750px;color:white;">
+        <p style="color:white;">Copyright © 2020 <a href="#">FILMcube</a> All rights reserved</p>
+      </div>
+    </footer>
+    <!-- footer ends -->
+</body>
+</html>
